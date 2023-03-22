@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>BankingApp</h1>
+    <p class="lead">Manage your Account </p>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <a class="btn btn-info btn-block max" href="@Url.Action("Balance" , "Transaction", new {checkingAcctId = ViewBag.CheckingId})"><span class="glyphicon glyphicon-bell"></span> Balance</a>
+        <a class="btn btn-info btn-block max" href="#"><span class="glyphicon glyphicon-info-sign"></span> Inquiry</a>
+    </div>
+    <div class="col-md-6">
+        <a class="btn btn-info btn-block max" href="@Url.Action("Deposit" ,"Transaction", new {checkingAcctid = ViewBag.CheckingId})"><span class="glyphicon glyphicon-arrow-up"></span> Deposit</a>
+        <a class="btn btn-info btn-block max" href="@Url.Action("Withdrawal" , "Transaction" , new {checkingAcctid = ViewBag.CheckingId})"><span class="glyphicon glyphicon-print"></span> Withdraw</a>
+    </div>
+
+</div>
